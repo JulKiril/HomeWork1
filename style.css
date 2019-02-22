@@ -1,169 +1,86 @@
-.container {
-	border: 2px dashed red;
-	width: 820px;
-	height: 180px;
-	background: white;	
-	margin: auto;
+body {
+	background: url(images/background1.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
-.container>:first-child {
+.wrapper {
+	text-align: center;
+	width: 950px;
+	margin-left: 15%;
+	margin-top: 10px;
+}
+
+h1 {
+	font-style: italic;
+	font-weight: bolder;
+}
+
+.breakfast, .lunch, .dinner {
+	border: 2px solid grey;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	width: 300px;
+	height: 500px;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-right: 5px;
+	float: left;
+}
+
+.breakfast:hover {
 	background: yellow;
-	width:30px;
-	height: 70px;
-	margin: 10px;
-	transform: translateX(3px);
+	opacity: 0.5;
 }
 
-.container>:nth-child(2) {
-	background: yellow;
-	width:70px;
-	height: 30px;	
-	transform: translate(13px, -20px);
+.lunch:hover {
+	background: pink;
+	opacity: 0.5;
 }
 
-.container>:nth-child(3) {
-	background: yellow;
-	width:30px;
-	height: 160px;	
-	transform: translate(85px, -110px);
+.dinner:hover {
+	background: green;
+	opacity: 0.5;
 }
 
-.container>:nth-child(4) {
-	background: yellow;
-	width:70px;
-	height: 30px;	
-	transform: translate(13px, -140px);
+img {
+	width: 250px;
+	height: 200px;
+	border-radius: 10px;
+	border: 1px solid grey;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+}
+ul>li {
+	text-align: left;
+	list-style-type: none;
 }
 
-.container>:nth-child(5) {
-	background: blue;
-	width:30px;
-	height: 160px;	
-	transform: translate(130px, -300px);
+ul>li::before {
+	content: "\2611";
+	margin-right: 5px;
+	color: green;
 }
 
-.container>:nth-child(6) {
-	background: blue;
-	width:30px;
-	height: 90px;	
-	transform: rotate(25deg) translate(-35px, -490px);	
+.general {
+	clear: both;
+	border: 2px solid grey;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	text-align: justify;
+	width: 900px;
+	padding: 10px;
 }
 
-.container>:nth-child(7) {
-	background: blue;
-	width:30px;
-	height: 90px;	
-	transform: rotate(135deg) translate(-465px, 210px);	
+.general:hover {
+	font-style: italic;
+	font-weight: bold;
+	font-size: 14pt;
+	color: red;
+	text-align: center;
 }
 
-.container>:nth-child(8) {
-	background: yellow;
-	width:30px;
-	height: 160px;
-	transform: translate(250px, -640px);
-}
-
-.container>:nth-child(9) {
-	background: yellow;
-	width:70px;
-	height: 30px;
-	transform: translate(282px, -800px);
-}
-
-.container>:nth-child(10) {
-	background: yellow;
-	width:30px;
-	height: 70px;
-	transform: translate(322px, -820px);
-}
-
-.container>:nth-child(11) {
-	background: yellow;
-	width:70px;
-	height: 30px;
-	transform: translate(282px, -840px);
-}
-
-.container>:nth-child(12) {
-	background: blue;
-	width:30px;
-	height: 160px;	
-	transform: rotate(15deg) translate(130px, -998px);
-}
-
-.container>:nth-child(13) {
-	background: blue;
-	width:30px;
-	height: 160px;	
-	transform: rotate(165deg) translate(-700px, 941px);
-}
-
-.container>:nth-child(14) {
-	background: blue;
-	width:70px;
-	height: 30px;	
-	transform: translate(390px, -1160px);
-}
-
-.container>:nth-child(15) {
-	background: yellow;
-	width:30px;
-	height: 120px;	
-	transform: translate(510px, -1240px);
-}
-
-.container>:nth-child(16) {
-	background: yellow;
-	width:30px;
-	height: 30px;	
-	transform: translate(485px, -1400px);
-}
-
-.container>:nth-child(17) {
-	background: yellow;
-	width:30px;
-	height: 30px;	
-	transform: translate(535px, -1430px);
-}
-
-.container>:nth-child(18) {
-	background: blue;
-	width:30px;
-	height: 160px;	
-	transform: translate(580px, -1460px);
-}
-
-.container>:nth-child(19) {
-	background: blue;
-	width:26px;
-	height: 30px;	
-	transform: translate(612px, -1550px);
-}
-
-.container>:nth-child(20) {
-	background: blue;
-	width:30px;
-	height: 160px;	
-	transform: translate(640px, -1650px);
-}
-
-.container>:nth-child(21) {
-	background: yellow;
-	width:30px;
-	height: 160px;	
-	transform: rotate(15deg) translate(220px, -1930px);
-}
-
-.container>:nth-child(22) {
-	background: yellow;
-	width:40px;
-	height: 30px;	
-	transform: translate(733px, -1880px);
-}
-
-.container>:nth-child(23) {
-	background: yellow;
-	width:30px;
-	height: 160px;	
-	transform: rotate(165deg) translate(-1255px, 1732px);
+.general:hover::after {
+	content: "Смачного)))";	
+	font-size: 18pt;
+	font-weight: bold;
 }
