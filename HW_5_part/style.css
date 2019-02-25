@@ -1,0 +1,91 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	background: url(images/bg.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.wrapper {
+	width:70%;
+	margin: 30px auto;
+	position: relative;
+	height: 100%;	
+}
+
+main {
+	background: #3f3f40;
+	position: relative;
+	top: 70px;
+	padding-left: 20px;
+}
+
+main h2 {
+	color: #6b9ec1;	
+	margin: 0;
+}
+
+.reasons img, .some_info img {
+	float: left;
+	margin: 5px;
+}
+
+.some_info img {
+	border: 2px solid black;
+	box-shadow: inset 2px 2px 2px 2px rgba(0,0,0,1);
+	width: 150px;
+	height: 150px;
+
+}
+
+.reasons  {
+	display: flex;
+	text-align: justify;
+}
+.some_info {
+	display: flex;
+	text-align: left;
+}
+.about, .add {
+	margin: 5px;
+	font-size: 12px;
+}
+
+.reasons p, .some_info p {
+	color: #7c7469;
+}
+
+.reasons h4, .some_info h4 {
+	color: white;
+}
+
+.some_info span {
+	color: white;
+	font-style: italic;
+}
+
+.about {
+	position: relative;
+	flex-grow: 5;
+}
+.about button {
+	background: url(images/btn.png);
+	background-size: contain;
+	background-repeat: no-repeat;	
+	border: none;
+	position: relative;
+	left: 50%;
+	width: 100px;
+	height: 30px;
+	color: white;
+}
+
+footer {
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+}
