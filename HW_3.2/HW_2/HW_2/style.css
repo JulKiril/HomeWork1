@@ -1,0 +1,17 @@
+body {
+	background: blue;
+}
+
+p:nth-child(3) {
+	text-align: right;
+	background: yellow;
+	padding: 10px;
+	border: 2px solid ;
+}
+
+p:nth-child(4) {
+	text-align: center;
+	color:red;
+	font-weight: bold;
+	font-size: 18pt;
+}
