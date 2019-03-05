@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+   @font-face {
+    font-family: LeagueGothic; 
+    src: url(fonts/LeagueGothicCyrillic.ttf); 
+    src: url(fonts/LeagueGothicCyrillic.otf);
+}
+
+   @font-face {
+    font-family: OpenSans; 
+    src: url(fonts/OpenSans-Light.ttf); 
+}
+
+body {
+	font-family: LeagueGothic; 
+}
+
+header {
+	width: 100%;
+	background: url(img/bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 867px;	
+}
+
+.headerContainer{
+	display: flex;
+	flex-direction: row;
+}
+
+.headerContainer__logo  {
+	height: 40px;
+	text-transform: uppercase;
+	font-size: 48px;
+	color: #ffffff;
+	text-shadow: 0 2px 2px rgba(75,76,91,0.3);
+	margin-top: 70px;
+	margin-left: 30%;
+}
+
+.headerContainer__logo span {
+	background: linear-gradient(to bottom, #724f81,#35273d);
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+}
+
+.headerContainer__menu {
+	margin-top: 70px;
+	margin-left: 7.4%;
+}
+
+.headerContainer__menu a {
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 24px;
+	text-shadow: 2px 2px 2px rgba(75,76,91,0.5);
+	text-align: center;
+	padding: 11px 33px;
+}
+
+.headerContainer__menu a:hover {
+	border-bottom: 2px solid #c3e54b;
+}
+
+@media screen and (max-width: 1600px) {
+	.headerContainer { 
+		flex-wrap: wrap;	
+	}
+	.headerContainer__menu {
+		margin-left: 30%;
+	}
+	.headerContainer__menu a {
+		text-align: center;
+		padding: 11px 66px 11px 0;
+	}
+
+}
+
+
+
+
+
+
