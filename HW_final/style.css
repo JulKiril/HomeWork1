@@ -2,29 +2,33 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
+	box-sizing: border-box;
 }
 
 a {
 	text-decoration: none;
+	color: rgb(69, 69, 69);
 }
 
 li {
 	list-style: none;
 }
 
-   @font-face {
-    font-family: LeagueGothic; 
-    src: url(fonts/LeagueGothicCyrillic.ttf); 
-    src: url(fonts/LeagueGothicCyrillic.otf);
+@font-face {
+	font-family: LeagueGothic; 
+	src: url(fonts/LeagueGothicCyrillic.ttf); 
+	src: url(fonts/LeagueGothicCyrillic.otf);
 }
 
-   @font-face {
-    font-family: OpenSans; 
-    src: url(fonts/OpenSans-Light.ttf); 
+@font-face {
+	font-family: OpenSans; 
+	src: url(fonts/OpenSans-Light.ttf); 
 }
 
 body {
-	font-family: LeagueGothic; 
+	font-family: LeagueGothic;
+	max-width: 2400px;
+	margin: 0 auto; 
 }
 
 header {
@@ -32,8 +36,8 @@ header {
 	background: url(img/bg.png);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
-	min-height: 867px;	
+	height: 841px;	
+	position: relative;
 }
 
 .headerContainer{
@@ -62,17 +66,460 @@ header {
 	margin-left: 7.4%;
 }
 
-.headerContainer__menu a {
+.headerContainer__item {
 	color: #ffffff;
 	text-transform: uppercase;
 	font-size: 24px;
 	text-shadow: 2px 2px 2px rgba(75,76,91,0.5);
 	text-align: center;
-	padding: 11px 33px;
+	padding: 11px 26px;
 }
 
-.headerContainer__menu a:hover {
-	border-bottom: 2px solid #c3e54b;
+.headerContainer__item:hover {
+	border-bottom: 2px solid #edbfff;
+}
+
+.slider {
+	position: relative;
+	height: 400px;
+	background: url(img/overlay.png);
+	background-size: cover;
+	margin-top: 175px;
+}
+
+.slider__text {
+	position: absolute;
+	top: 83px;
+	left: 30%;
+	width: 502px;
+	text-align: left;
+	line-height: 1;
+	text-shadow: 2px 2px 2px rgba(75,76,91,0.3);
+	color: #fefefe;	
+}
+
+.slider__text h2 {	
+	font-size: 60px;
+}
+
+.slider__text h2 span {
+	color: #edbfff;
+	font-size: 32px;
+	text-transform: uppercase;
+}
+
+.slider__text p {
+	font-family: OpenSans; 
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+.slider__img {
+	position: absolute;
+	top: -17px;
+	right: 33%;
+}
+
+
+.slider__lable {
+	position: absolute;
+	top: 495px;
+	left: 59.8%;
+}
+
+.slider__lable input{
+	display: none;
+}
+
+.slider__lable i {
+	cursor: pointer;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 10px;
+	background: rgb(64, 67, 76, 0.3);
+	position: relative;
+	margin: 5px;
+}
+
+.slider__lable i::before {
+	content: "";
+	position: absolute;
+	top: 3px;
+	bottom: 3px;
+	left: 3px;
+	right: 3px;
+	background: #e7e7e7;
+	border-radius: 100px;
+	transform: scale(0);
+}
+
+.slider__lable input:checked+i::before {
+	transform: scale(1);
+
+}
+
+main {
+	background: url(img/Blurbs.png);
+	background-size: cover;
+	width: 100%;
+	height: 342px;
+}
+
+.wrappAbout {
+	width: 960px;
+	margin-left: 30%;
+	padding-top: 80px;
+	display: flex;
+	flex-direction: row;
+}
+
+.about {
+	width: 300px;
+	text-align: left;
+	margin-right: 50px;
+}
+
+.about::before {
+	content: url(img/1.png);
+	float: left;
+	margin-right: 15px; 
+	margin-left: 12px;
+}
+
+.about:nth-child(2)::before {
+	content: url(img/2.png);
+}
+
+.about:nth-child(3)::before {
+	content: url(img/3.png);
+}
+
+.about__title{
+	font-size: 30px;
+	font-family: "League Gothic";
+	color: rgb(255, 255, 255);
+	text-shadow: 0px 1px 0px rgba(15, 21, 24, 0.004);	
+
+} 
+
+
+.about__text {
+	font-size: 16px;
+	font-family: "Open Sans";
+	color: rgb(255, 255, 255);
+	line-height: 1.5;
+	text-shadow: 0px 1px 0px rgba(15, 21, 24, 0.004);
+	margin-bottom: 25px;
+	margin-left: 63px;
+}
+
+.about__link {
+	text-transform: uppercase;
+	font-size: 18px;
+	font-family: "League Gothic";
+	color: rgb(255, 255, 255);
+	line-height: 1.333;
+	text-align: left;
+	text-shadow: 0px 1px 0px rgba(15, 21, 24, 0.004);
+	margin-left: 210px;
+}
+
+.about__link:hover {
+	text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+}
+
+.sectionBlog {
+	width: 100%;
+	height: 610px;
+	background: url(img/blogBg.png);
+}
+
+.wrappBlog {
+	width: 960px;
+	margin-left: 30%;
+	padding-top: 80px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.blog {
+	position: relative;
+	box-sizing: border-box;
+	min-height: 298px;
+	width: 430px;
+	text-align: left;
+	background: url(img/blogWindow.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 32px 43px 42px 40px;
+}
+
+.blog__title {
+	font-size: 30px;
+	font-family: "League Gothic";
+	color: rgb(69, 69, 69);
+	text-transform: uppercase;
+	line-height: 0.8;
+	text-align: left;
+	margin-bottom: 21px;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+}
+
+.blog__text {
+	font-size: 16px;
+	font-family: "Open Sans";
+	color: rgb(69, 69, 69);
+	line-height: 1.5;
+	text-align: left;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+}
+
+.blog__lable {
+	position: absolute;
+	top: 298px;
+	left: 172px;
+}
+
+.blog__lable input{
+	display: none;
+}
+
+.blog__lable i {
+	cursor: pointer;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 10px;
+	background: #ffffff;
+	position: relative;
+	margin: 5px;
+	border: 1px solid #e6e6e6;
+}
+
+.blog__lable i::before {
+	content: "";
+	position: absolute;
+	top: 3px;
+	bottom: 3px;
+	left: 3px;
+	right: 3px;
+	background: #555555;
+	border: 1px solid #454545;
+	border-radius: 100px;
+	transform: scale(0);
+}
+
+.blog__lable input:checked+i::before {
+	transform: scale(1);
+}
+
+.updates {
+	width: 450px;
+	margin-left: 60px;
+	padding-top: 32px;
+}
+.updates__title {
+	font-size: 30px;
+	font-family: "League Gothic";
+	color: rgb(69, 69, 69);
+	text-align: left;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+	text-transform: uppercase;
+	line-height: 0.8;
+	margin-bottom: 23px;
+}
+.updates__item {
+	display: inline-block;
+	width: 100%;
+	line-height: 1.5;
+	font-size: 16px;
+	font-family: "Open Sans";
+	color: rgb(69, 69, 69);
+	line-height: 1.5;
+	text-align: left;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+	margin-bottom: 20px;
+}
+
+.updates__item span {
+	font-weight: bolder;
+}
+
+.updates__item::before {
+	content: "";
+	display: inline-block;
+	float: left;
+	margin-right: 17px;
+	height: 49px;
+	width: 49px;
+	border-radius: 30px;
+	background-image: url(img/blogBubbles.png);
+}
+
+.updates__readMore {
+	text-transform: uppercase;
+	font-size: 18px;
+	font-family: "League Gothic";
+	color: rgb(69, 69, 69);
+	line-height: 1.333;
+	text-align: left;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+	text-align: right;
+}
+
+.sectionBlog hr{
+	width: 100%;
+	size: 2px;
+	color: black;
+}
+
+.sectionBlog hr {
+	border: 0;
+	display:block;
+	width: 100%;               
+	background: url(img/hr.png);
+	height: 1px;  
+}
+
+.topLine{
+	margin-top: 94px;
+}
+.bottomLine {
+	margin-top: 32px;
+}
+
+
+
+.sectionBlog img {
+	margin-left: 33.9%;
+	margin-top: 28px;
+}
+
+.footer__info {
+	background-image: url("img/newsBg.png");
+	width: 100%;
+	height: 512px;
+}
+.wrappInfo {	
+	width: 960px;
+	margin-left: 30%;
+	display: flex;
+	flex-direction: row;
+}
+
+.copyright, .comments, .news {
+	width: 283px;
+	text-align: left;
+	padding-top: 100px;
+	margin-right: 57px;
+}
+.copyright__title {
+	text-transform: uppercase;
+	font-size: 48px;
+	font-family: "League Gothic";
+	color: rgb(69, 69, 69);
+	line-height: 0.703;
+	text-align: left;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+	margin-bottom: 25px;
+}
+.copyright__title span { 
+	color: rgb(185, 185, 185);
+}
+.copyright__name {
+	font-size: 16px;
+	font-family: "Georgia";
+	color: rgb(197, 197, 197);
+	font-style: italic;
+	line-height: 1.5;
+	text-align: left;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+	margin-bottom: 16px;
+}
+.copyright__text {
+	font-size: 16px;
+	font-family: "Open Sans";
+	color: rgb(120, 120, 120);
+	line-height: 1.5;
+	text-align: left;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+}
+.comments__title {
+	font-size: 30px;
+	font-family: "League Gothic";
+	color: rgb(69, 69, 69);
+	line-height: 0.8;
+	text-align: left;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+	margin-bottom: 22px;
+}
+.comments__text {
+  font-size: 16px;
+  font-family: "Open Sans";
+  color: rgb(120, 120, 120);
+  line-height: 1.5;
+  text-align: left;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+}
+
+.news__title {
+  font-size: 30px;
+  font-family: "League Gothic";
+  color: rgb(69, 69, 69);
+  line-height: 0.8;
+  text-align: left;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+  margin-bottom: 22px;
+}
+.news__text {
+	  font-size: 16px;
+  font-family: "Open Sans";
+  color: rgb(120, 120, 120);
+  line-height: 1.5;
+  text-align: left;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+}
+
+.footer__menu {
+	background-image: url(img/bgFooter.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 115px;
+}
+.wrapper {
+	width: 960px;
+	margin-left: 30%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.menu, .designed{
+	margin-top: 48px;
+}
+.menu__item {
+font-size: 20px;
+  font-family: "League Gothic";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1.686;
+  text-align: left;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+  padding-right: 56px;
+}
+
+.designed>p{
+  font-size: 12px;
+  font-family: "Open Sans";
+  color: rgb(255, 255, 255);
+  line-height: 2.81;
+  text-align: left;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+.designed>p>span {
+	font-weight: bolder;
 }
 
 @media screen and (max-width: 1600px) {
@@ -82,9 +529,8 @@ header {
 	.headerContainer__menu {
 		margin-left: 30%;
 	}
-	.headerContainer__menu a {
-		text-align: center;
-		padding: 11px 66px 11px 0;
+	.headerContainer__item:first-child{
+		padding-left: 0;
 	}
 
 }
