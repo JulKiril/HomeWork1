@@ -16,8 +16,7 @@ li {
 
 @font-face {
 	font-family: LeagueGothic; 
-	src: url(fonts/LeagueGothicCyrillic.ttf); 
-	src: url(fonts/LeagueGothicCyrillic.otf);
+	src: url(fonts/LeagueGothic-Regular.otf); 
 }
 
 @font-face {
@@ -686,9 +685,3 @@ main {
 		margin-left: 584px;
 	}
 }
-
-
-
-
-
-
