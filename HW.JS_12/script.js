@@ -47,12 +47,18 @@ textStyle.fw[1].addEventListener('click', function(){
 	mainDiv.style.fontStyle = this.value;
 	mainDiv.style.fontWeight = '';
 	textStyle.fw[0].checked = false;
+	if(textStyle.fw[1].checked==false){
+		mainDiv.style.fontStyle = '';
+	}
 })
 
 textStyle.fw[0].addEventListener('click', function(){
 	mainDiv.style.fontWeight = this.value;
 	mainDiv.style.fontStyle = '';
 	textStyle.fw[1].checked = false;
+	if(textStyle.fw[0].checked==false){
+		mainDiv.style.fontWeight = '';
+	}
 })
 
 let tdColor = document.getElementsByTagName('td');
@@ -161,7 +167,7 @@ listCreate.createListBtn.addEventListener('click', function(){
 	for(let j = 1; j<=liCount; j++){
 		textEdit.area.value+= `<li >item ${j}</li>`;
 	}
-	
+	textEdit.area.value+=`</ul>`;
 })
 
 
