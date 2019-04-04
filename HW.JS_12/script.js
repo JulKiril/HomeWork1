@@ -25,7 +25,7 @@ textEdit.sv.addEventListener('click', function(){
     textEdit.area.value = "";
     textEdit.classList.remove('dspBlock');
 })
-
+//add styles
 styleBtn.addEventListener('click', function(){
 	textStyle.classList.add('dspBlock');
 	textEdit.classList.remove('dspBlock');
@@ -43,6 +43,7 @@ textStyle.fontFamily.addEventListener('change', function(){
 		}
 	}
 })
+
 textStyle.fw[1].addEventListener('click', function(){
 	mainDiv.style.fontStyle = this.value;
 	mainDiv.style.fontWeight = '';
